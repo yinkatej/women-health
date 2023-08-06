@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Subscribe to a Topic</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./css/subscribe.css">
+<script src="https://kit.fontawesome.com/a1800f771f.js" crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/jquery-3.7.0.min.js"
+  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+  crossorigin="anonymous"></script>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="login-form-wrap">
+  <h2>Subscribe to a Topic</h2>
+  <form id="subscribe">
+    <p>
+    <input type="text" id="fname" name="username" placeholder="First Name" required><i class="validation"><span></span><span></span></i>
+    </p>
+    <p>
+      <input type="text" id="lname" name="username" placeholder="Last Name" required><i class="validation"><span></span><span></span></i>
+      </p>
+    <p>
+    <input type="email" id="email" name="email" placeholder="Email Address" required><i class="validation"><span></span><span></span></i>
+    </p>
+    <p>
+      <select id="topic">
+        <option selected>Select a topic</option>
+        <option value="1">Nursing Mothers</option>
+        <option value="2">Pregnant Women</option>
+        <option value="3">Reproductive Women</option>
+      </select>
+    </p>
+    <p>
+    <input type="submit" id="login" value="Subscribe">
+    </p>
+  </form>
+  <div class="popup" >
+    <i class="fa-solid fa-circle-check"></i>
+    <h2>Thank You!</h2>
+    <p>You have successfully subscribed</p>
+    <a href="/">OK</a>
+  </div>
+  
+</div><!--login-form-wrap-->
+<!-- partial -->
+  <script src='./js/subscribe.js'></script>
+</body>
+</html>

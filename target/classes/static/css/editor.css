@@ -1,0 +1,115 @@
+.banner{
+    width: 100%;
+    height: 200px;
+    position: relative;
+    background: #e7e7e7;
+    background-size: cover;
+    background-position: center;
+}
+
+.blog{
+    width: 70vw;
+    min-width: 400px;
+    height: 100vh;
+    display: block;
+    margin: auto;
+    padding: 50px 0;
+}
+
+textarea::-webkit-scrollbar{
+    width: 10px;
+}
+
+textarea::-webkit-scrollbar-thumb{
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.title,
+.article{
+    width: 100%;
+    
+    height: auto;
+    outline: none;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #2d2d2d;
+    resize: none;
+    border: solid 1px ;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.title::placeholder,
+.article::placeholder{
+    color: #2d2d2ddc;
+}
+
+.article{
+    height: 500px;
+    font-size: 20px;
+    margin-top: 20px;
+    line-height: 30px;
+    font-weight: 500;
+    padding-bottom: 100px;
+    white-space: pre-wrap;
+}
+
+.blog-options{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.btn.grey{
+    background: #a5a5a5;
+    color: #fff;
+    margin-left: 20px;
+    font-size: 14px;
+}
+.popup{
+    width: 400px;
+    min-height: 300px;
+    background: #fff;
+    position: absolute;
+    border-radius: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    padding: 0px 30px, 20;
+    border: 3px solid #130f0fb2;
+    z-index: 40;
+    display:none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  
+  }
+  .popup a{
+    text-decoration: none;
+    background: rgba(12, 11, 12, 0.8);
+    color: white;
+    padding: 10px 40px;
+    border-radius: 30px;
+    border: 2px solid #cc1111;
+  }
+  .fa-solid{
+    font-size: 80px;
+    color: #0C0;
+  }

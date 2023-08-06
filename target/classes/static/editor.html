@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog : Editor</title>
+
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/editor.css">
+    <script src="https://cdn.tiny.cloud/1/s9suhipe2c6b9o72ih1v2c08v9hrye9i0lhmzyntv1yzhmxh/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a1800f771f.js" crossorigin="anonymous"></script
+</head>
+<body>
+
+    <div class="banner">
+       
+      
+    </div>
+
+ 
+    <div class="blog">
+        <input type="text" placeholder="Title" id="title" class="title">
+        <select class="title" id="topic">
+            <option selected>Select Topic</option>
+            <option value="1">Nursing Mothers</option>
+            <option value="2">Pregnant Women</option>
+            <option value="3">Reproductive Women</option>
+        </select>
+        <input type="text" placeholder="Name of publisher" id="publisher" class="title" >
+        <textarea type="text" class="text" id="text" placeholder="Start writing here..."></textarea>
+    </div>
+
+    <div class="blog-options">
+        <button class="btn dark publish-btn" id="button" >Publish</button>
+            
+    </div>
+    
+    <div class="popup" >
+        <i class="fa-solid fa-circle-check"></i>
+        <h2>Published successfully!</h2>
+        <p> </p>
+        <a href="/">Back to Homepage</a>
+      </div>
+
+   
+    
+   
+    <script>
+    tinymce.init({
+    selector: 'textarea#text',
+    plugins: 'image',
+    toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+    tinycomments_mode: 'embedded',
+    a_plugin_option: true,
+    a_configuration_option: 400
+});
+    </script>
+    <script src="./js/editor.js"></script>
+
+</body>
+</html>
