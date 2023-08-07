@@ -4,13 +4,18 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/health_blog?useeSL-false&serverTimezone=UTC&useLegacyDatetimeCode=false
-    username: root
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    # url: jdbc:mysql://localhost:3306/health_blog?useeSL-false&serverTimezone=UTC&useLegacyDatetimeCode=false
+    # username: root
+    # driver-class-name: com.mysql.cj.jdbc.Driver
+    maxActive: 10
+    maxIdle: 5
+    minIdle: 2
+    initialSize: 5
+    removeAbandoned: true
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
