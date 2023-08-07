@@ -1,0 +1,1 @@
+web: java -jar target/healthcare-blog-1.0.0.SANPSHOT.jar
