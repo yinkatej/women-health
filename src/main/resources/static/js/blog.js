@@ -15,6 +15,14 @@ const runData = (data)=>{
             blog.innerHTML = `<div>
             <h2>${e.title}</h2>
             ${e.blog}
+            <h3>We value your feedback</h3>
+            <div class="feedback">
+
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Email">
+                <textarea placeholder="feedback here"></textarea>
+                <button>Submit</button>
+            </div>
             </div>`
         })
         let body = e.blog
@@ -25,6 +33,7 @@ const runData = (data)=>{
             <h5>${e.topic.topic}</h5>
             <p>${body}</p>
             <i><p>${e.publisherName}</p></i>
+            
         </div>
         `
         blog.appendChild(el)

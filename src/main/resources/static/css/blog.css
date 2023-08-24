@@ -89,3 +89,28 @@
 .btn:hover{
     background-color: aliceblue;
 }
+.feedback{
+    display: flex;
+    flex-direction: column;
+    padding-right: 50%;
+}
+input{
+    margin-bottom: 10px;
+    padding: 5px 0px;
+    font-size: 16px;
+}
+input:focus{ 
+    outline: none;
+}
+textarea{
+    height: 250px;
+    padding: 2px 4px;
+    border-radius: 2px;
+}
+.feedback button{
+    padding: 10px 0px;
+    background-color: aquamarine;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
