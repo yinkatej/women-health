@@ -15,7 +15,7 @@ publishBtn.addEventListener('click',()=>{
         blog: tinyMCE.activeEditor.getContent(),
         title: title.value
     }
-    fetch('http://localhost:3000/publish', {
+    fetch('/publish', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

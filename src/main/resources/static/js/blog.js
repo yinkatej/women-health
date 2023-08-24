@@ -47,7 +47,7 @@ window.onload = () =>{
     const  [all, ...arr] = [...topics]
     console.log(arr)
    
-    fetch('http://localhost:3000/all_blog', {
+    fetch('/all_blog', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
