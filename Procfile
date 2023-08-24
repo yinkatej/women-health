@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT -jar target/healthcare-blog-0.0.1-SANPSHOT.jar.original
+web: java -Dserver.port=$PORT -jar target/healthcare-blog-0.0.1-SANPSHOT.jar
