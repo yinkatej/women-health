@@ -3,9 +3,9 @@
     height: fit-content;
     padding-bottom: 0;
 }
-.banner{
-    background-image: url();
-}
+/* .banner{
+   background-color: #502d2d;
+} */
 
 .article, .title{
     min-height: auto;
@@ -26,7 +26,7 @@
     font-weight: 700;
     font-style: normal;
 }
-
+/* 07010213716 */
 .article *{
     margin: 30px 0;
     color: #2d2d2d;
@@ -113,4 +113,33 @@ textarea{
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+.navbar img{
+    height: 100%;
+}
+
+@media screen and (max-width:400px){
+    body{
+        padding: none;
+        margin: 0px;
+        
+    }
+    .banner, .navbar{
+        width: 80%;
+        margin: 0px;
+    }
+    .topics{
+        width: 100%;
+        justify-content: center;
+    }
+    .btn{
+        padding: 0px 0px;
+        font-size: 0.9em;
+        background: none;
+        visibility: hidden;
+    }
+    .blog{
+        width: 90%;
+        padding: 4px 0px;
+    }
 }

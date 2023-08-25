@@ -14,7 +14,7 @@ const runData = (data)=>{
         el.addEventListener('click', ()=>{
             blog.innerHTML = `<div>
             <h2>${e.title}</h2>
-            ${e.blog}
+            ${e.blog}<br><br>
             <h3>We value your feedback</h3>
             <div class="feedback">
 
