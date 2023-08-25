@@ -113,11 +113,12 @@ body{
 .navbar img{
     height: 100%;
 }
-@media screen and (max-width:400px){
+@media screen and (max-width:500px){
     body{
         width: 100%;
         padding: 0px 2px;
         font-size: 0.8em;
+        height: 100vh;
     }
     .navbar{
         width: 100%;
@@ -127,6 +128,10 @@ body{
     }
     .heading{
         font-size: 20px
+    }
+    .header{
+        background-color: #000;
+        background-image: url(../img/img4.png);
     }
     
 }
