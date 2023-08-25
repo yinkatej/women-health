@@ -147,6 +147,6 @@ textarea{
         width: 80%;
     }
     .feedback{
-        padding-right: none;
+        padding-right: 0px;
     }
 }
