@@ -140,7 +140,13 @@ textarea{
         visibility: hidden;
     }
     .blog{
-        max-width: 80%;
+        max-width: 90%;
         padding: 4px 5px;
+    }
+    .blog div{
+        width: 80%;
+    }
+    .feedback{
+        padding-right: none;
     }
 }
