@@ -25,7 +25,7 @@ public class KafkaConsumer {
     private UserRepository userRepository;
 
     String subject = "A new update for you";
-    String url = "http://localhost:3000/blog?title=";
+    String url = "https://women-health-2674a5ec82b7.herokuapp.com/?title=";
 
 //   Nursing Mothers
 //    @KafkaListener(topics = "1", groupId = "my-group")

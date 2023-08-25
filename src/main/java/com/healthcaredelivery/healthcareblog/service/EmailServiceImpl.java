@@ -20,7 +20,7 @@ public class EmailServiceImpl implements EmailService{
     @Autowired
     private SpringTemplateEngine templateEngine;
 
-    @Value("HealthBot") private String sender;
+    @Value("yinkatej") private String sender;
     @Override
     public String sendSimpleMail(String toEmail, String subject, String body, String name,  String title, String url) {
         MimeMessage mimeMessage = javaMailSender.createMimeMessage();
@@ -32,12 +32,7 @@ public class EmailServiceImpl implements EmailService{
             mimeMessageHelper.setSubject(subject);
 
 
-            Context context = new Context();
-            context.setVariable("name", name);
-            context.setVariable("url", url);
-            context.setVariable("title", title);
-
-            String emailContent = templateEngine.process("emailTemp.html", context);
+            
             mimeMessageHelper.setText(body);
 
 
