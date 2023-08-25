@@ -186,3 +186,18 @@ input[type="submit"]:hover {
   font-size: 80px;
   color: #0C0;
 }
+
+@media screen and (max-width:400px){
+  body{
+    display: flex;
+    background: none;
+    font-size: 0.8em;
+    padding:0% 0px
+  }
+  #login-form-wrap{
+    width: 90%;
+    height: 100vh;
+  }
+
+  
+}

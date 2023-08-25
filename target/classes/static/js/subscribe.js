@@ -16,7 +16,7 @@ subscribe.addEventListener('submit', e=>{
         topicId: Number(topic.value)
     } 
     
-    fetch('http://localhost:3000/subscribe', {
+    fetch('/subscribe', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
