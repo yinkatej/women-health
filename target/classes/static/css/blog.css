@@ -118,6 +118,9 @@ textarea{
 .navbar img{
     height: 100%;
 }
+form{
+    width: 30%;
+}
 
 @media screen and (max-width:500px){
     body{
