@@ -15,7 +15,7 @@ const runData = (data)=>{
             blog.innerHTML = `<div>
             <h2>${e.title}</h2>
             ${e.blog}<br><br>
-            <h3>We value your feedback</h3>
+            <h3>Questions</h3>
             <div class="feedback">
 
                 <input type="text" placeholder="Name">
