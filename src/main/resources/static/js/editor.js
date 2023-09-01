@@ -1,14 +1,15 @@
 
 
 
-const publishBtn = document.getElementById("button");
+const form = document.getElementById("form");
 const title = document.getElementById('title');
 const publisher = document.getElementById('publisher');
 const topic = document.getElementById('topic')
 const popup = document.getElementsByClassName('popup')
 
 
-publishBtn.addEventListener('click',()=>{
+form.addEventListener('submit',(e)=>{
+  e.preventDefault()
     const body = {
         publisherName: publisher.value,
         topicId: Number(topic.value),
