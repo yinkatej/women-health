@@ -114,7 +114,7 @@ body{
     height: 100%;
 }
 p{
-    /* transform: translateX(100%); */
+    transform: translateX(100%);
     animation: scroll 20s linear infinite
 }
 @keyframes scroll {

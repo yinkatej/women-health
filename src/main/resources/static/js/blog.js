@@ -17,6 +17,7 @@ const runData = (data)=>{
             blog.innerHTML = `<div>
             <h2>${e.title}</h2>
             ${e.blog}
+            <i>By ${e.publisherName}</i>
             <h3>Questions</h3>
             <div class="feedback">
                 <input type="text" placeholder="Name">
@@ -80,7 +81,8 @@ window.onload = () =>{
                 el.classList.add('card')
                     blog.innerHTML = `<div>
                     <h2>${e.title}</h2>
-                    ${e.blog}
+                    ${e.blog}<br>
+                    <i>${e.publisherName}</i>
                     </div>`})
                 // blog.appendChild(el)
     

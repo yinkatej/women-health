@@ -1,6 +1,7 @@
 const blog =document.getElementById('blog')
 const form = document.getElementById('form')
 const search = document.getElementById('search')
+const category = document.getElementById('category')
 // const html=''
 const all = document.getElementById('all')
 let jsonData = null
@@ -16,6 +17,7 @@ const runData = (data)=>{
             blog.innerHTML = `<div>
             <h2>${e.title}</h2>
             ${e.blog}
+            <i>By ${e.publisherName}</i>
             <h3>Questions</h3>
             <div class="feedback">
                 <input type="text" placeholder="Name">
@@ -39,10 +41,23 @@ const runData = (data)=>{
         blog.appendChild(el)
     })
 }
+const run = (data) => {
+    blog.innerHTML = ''
+    const el = document.createElement('ul')
+    let ul = ''
+    data.map(e => {
+     ul    = ul.concat(`
+        <li><h3>${e.title}</h3>
+        </li>
+        `)
+    el.innerHTML = ul
+        blog.appendChild(el)
+    })
+}
 window.onload = () =>{  
     const url = new URLSearchParams(window.location.search)
     const title = url.get('title')
-    console.log(title)
+    // console.log(title)
     // let topic = null
    
    
@@ -66,7 +81,8 @@ window.onload = () =>{
                 el.classList.add('card')
                     blog.innerHTML = `<div>
                     <h2>${e.title}</h2>
-                    ${e.blog}
+                    ${e.blog}<br>
+                    <i>${e.publisherName}</i>
                     </div>`})
                 // blog.appendChild(el)
     
@@ -92,13 +108,16 @@ window.onload = () =>{
 //     })
     
 // })
-    all.addEventListener('click', ()=>runData(jsonData));
+    all.addEventListener('click', ()=>run(jsonData));
     form.addEventListener('submit', (e)=>{
         e.preventDefault();
         let data = []
         jsonData.map(e=>{
             if ((e.title).toLowerCase().includes((search.value).toLowerCase()))
                 data = [...data, e]
+             console.log(e)
+                data = data.filter(e=>e.topic.id===Number(category.value))
+               
         })
         while(blog.hasChildNodes()){
             blog.removeChild(blog.firstChild)

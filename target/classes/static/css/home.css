@@ -113,6 +113,14 @@ body{
 .navbar img{
     height: 100%;
 }
+p{
+    transform: translateX(100%);
+    animation: scroll 20s linear infinite
+}
+@keyframes scroll {
+    0%{transform: translateX(100%);}
+    100%{transform: translateX(-100%);}
+}
 @media screen and (max-width:400px){
     body{
         width: 100%;
