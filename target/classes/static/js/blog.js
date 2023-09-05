@@ -1,7 +1,8 @@
 const blog =document.getElementById('blog')
-
+const form = document.getElementById('form')
+const search = document.getElementById('search')
 // const html=''
-const topics = document.getElementsByClassName('btn')
+const all = document.getElementById('all')
 let jsonData = null
 
 const runData = (data)=>{
@@ -14,10 +15,9 @@ const runData = (data)=>{
         el.addEventListener('click', ()=>{
             blog.innerHTML = `<div>
             <h2>${e.title}</h2>
-            ${e.blog}<br><br>
+            ${e.blog}
             <h3>Questions</h3>
             <div class="feedback">
-
                 <input type="text" placeholder="Name">
                 <input type="text" placeholder="Email">
                 <textarea placeholder="feedback here"></textarea>
@@ -30,9 +30,9 @@ const runData = (data)=>{
         el.innerHTML=`
         <div class="any">
             <h2>${e.title}</h2>
-            <h5>${e.topic.topic}</h5>
+            <!--<h5>${e.topic.topic}</h5>
             <p>${body}</p>
-            <i><p>${e.publisherName}</p></i>
+            <i><p>${e.publisherName}</p></i>-->
             
         </div>
         `
@@ -43,9 +43,9 @@ window.onload = () =>{
     const url = new URLSearchParams(window.location.search)
     const title = url.get('title')
     console.log(title)
-    let topic = null
-    const  [all, ...arr] = [...topics]
-    console.log(arr)
+    // let topic = null
+   
+   
    
     fetch('/all_blog', {
         method: 'GET',
@@ -70,28 +70,42 @@ window.onload = () =>{
                     </div>`})
                 // blog.appendChild(el)
     
-            }else 
-            runData(data)
+            }
+            // else 
+            // runData(data)
    
         })
         .catch(error=>{
             console.log('Error:', error)
     })
 
-    const filtr=(value)=>{
-         return jsonData.filter(e=>e.topic.topic==value)
-    }
+//     const filtr=(value)=>{
+//          return jsonData.filter(e=>e.topic.topic==value)
+//     }
 
-    arr.map((e, i)=>{
-        e.addEventListener('click', e=>{
+//     arr.map((e, i)=>{
+//         e.addEventListener('click', e=>{
+//         while(blog.hasChildNodes()){
+//             blog.removeChild(blog.firstChild)
+//         }
+//         runData(filtr(e.target.value))
+//     })
+    
+// })
+    all.addEventListener('click', ()=>runData(jsonData));
+    form.addEventListener('submit', (e)=>{
+        e.preventDefault();
+        let data = []
+        jsonData.map(e=>{
+            if ((e.title).toLowerCase().includes((search.value).toLowerCase()))
+                data = [...data, e]
+        })
         while(blog.hasChildNodes()){
             blog.removeChild(blog.firstChild)
         }
-        runData(filtr(e.target.value))
+        runData(data)
+
     })
-    all.addEventListener('click', ()=>runData(jsonData))
-})
-    
 }
 
 
