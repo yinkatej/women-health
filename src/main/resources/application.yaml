@@ -14,7 +14,7 @@ spring:
     initialSize: 5
     removeAbandoned: true
     hikari:
-      maxLifeTime: 590000
+      maxLifeTime: 5000
   jpa:
     show-sql: true
     hibernate:
