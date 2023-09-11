@@ -28,7 +28,7 @@ public class Blog {
     private String publisherName;
 
 //    @JsonIgnore
-    @ManyToOne( fetch = FetchType.EAGER , cascade = CascadeType.ALL)
+    @ManyToOne( fetch = FetchType.EAGER , cascade = CascadeType.MERGE)
     @JoinColumn(name = "topic_id")
     private Topic topic;
 
